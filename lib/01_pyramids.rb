@@ -7,12 +7,12 @@ def half_pyramid
 	print "> "
 
 #On demande le nombre d'étages
-	etages = gets.chomp.to_i
+	steps = gets.chomp.to_i
 
 #On affiche la pyramide
 	puts "Voici la pyramide :"
-	etages.times do |i|
-	puts " " * (etages - (i+1)) + "#" * (i+1)
+	steps.times do |i|
+	puts " " * (steps - (i+1)) + "#" * (i+1)
 end
 end
 
@@ -26,12 +26,12 @@ def full_pyramid
 	print "> "
 
 #On demande le nombre d'étages
-	etages = gets.chomp.to_i
+	steps = gets.chomp.to_i
 
 #On affiche la pyramide
 	puts "Voici la pyramide :"
-	etages.times do |i|
-	puts " " * (etages - ( i + 1 )) + "#" * ( 2 * i + 1) + " " * (etages - ( i + 1 ))
+	steps.times do |i|
+	puts " " * (steps - ( i + 1 )) + "#" * ( 2 * i + 1) + " " * (steps - ( i + 1 ))
 end
 end
 
@@ -45,22 +45,22 @@ def wtf_pyramid
 	print "> "
 
 #On demande le nombre d'étages
-	etages = gets.chomp.to_i
+	steps = gets.chomp.to_i
 
 #On teste si le nombre est pair
-	if etages % 2 != 0
+	if steps % 2 != 0
 
 #S'il est impair, on affiche la pyramide 
 		puts "Voici la pyramide :"
-			etages.times do |i|
+			steps.times do |i|
 
 #Partie haute du losange
-				if i < etages / 2 
-				puts " " * (etages - ( i + 1 )) + "#" * ( 2 * i + 1) + " " * (etages - ( i + 1 ))
+				if i < steps / 2 
+				puts " " * (steps - ( i + 1 )) + "#" * ( 2 * i + 1) + " " * (steps - ( i + 1 ))
 
 #Partie basse du losange
 				else 
-				puts " " * i + "#" * (2 *etages - (2 *i + 1)) + " " * i
+				puts " " * i + "#" * (2 *steps - (2 *i + 1)) + " " * i
 				end
 			end
 
